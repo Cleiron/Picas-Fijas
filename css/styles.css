@@ -1,0 +1,77 @@
+html {
+    position: relative;
+}
+/*https://colorhunt.co/palette/f9f2ed3ab0ffffb562f87474*/
+body {
+    background: rgb(176,241,246);
+    background: -moz-radial-gradient(circle, rgba(176,241,246,1) 0%, rgba(58,176,255,1) 100%);
+    background: -webkit-radial-gradient(circle, rgba(176,241,246,1) 0%, rgba(58,176,255,1) 100%);
+    background: radial-gradient(circle, rgba(176,241,246,1) 0%, rgba(58,176,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#b0f1f6",endColorstr="#3ab0ff",GradientType=1);
+    
+    font-family: "Ubuntu";
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #F87474;
+    color: white;
+}
+.navdiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-right:1rem;
+}
+.navdiv div {
+    margin-left: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    border-radius: 0.7rem;
+}
+.navdiv div:hover {
+    background-color: #FFB562;
+}
+.principal {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+.titulo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 4rem;
+    font-family: "Capriola";
+    color: #d42929
+}
+
+.juego {
+    margin-top: 3rem;
+    background-color: #F9F2ED;
+    width: 35rem;
+    height: 40rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    background: #F87474;
+    color: white;
+    position: absolute;
+    bottom:0;
+    left:0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 0.8rem;
+}
