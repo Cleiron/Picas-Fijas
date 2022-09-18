@@ -76,18 +76,25 @@ footer {
     font-size: 0.8rem;
 }
 
-@media  (max-width:400px){
+@media  (max-width:800px){
     .titulo {
         font-size: 2rem;
     }
 
     .juego {
-        width: 20rem;
-        height: 25rem;
+        width: 90vw;
+        height: 70vh;
+		margin-top: 1rem;
     }
 
-    .nav {
+    .navdiv {
         font-size: 1rem;
+		display: flex;
+		align-items: center;
     }
+	
+	.principal {
+	  margin-top: 4.5rem;
+	}
 
 }
