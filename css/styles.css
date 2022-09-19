@@ -93,7 +93,7 @@ footer {
 
     .juego {
         width: 90vw;
-        height: calc(100vh - 12rem);
+        height: calc(90vh - 10rem);
 		margin-top: 1rem;
     }
 
