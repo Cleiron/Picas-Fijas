@@ -94,7 +94,7 @@ footer {
     .juego {
         width: 90vw;
         height: calc(90vh - 8rem);
-		margin-top: 1rem;
+		margin-top: 0.5rem;
     }
 
     .navdiv {
