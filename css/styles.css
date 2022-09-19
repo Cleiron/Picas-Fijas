@@ -20,6 +20,9 @@ nav {
     background: #F87474;
     color: white;
 }
+.opciones {
+    display: None;
+}
 .navdiv {
     display: flex;
     flex-direction: row;
@@ -51,6 +54,9 @@ nav {
     font-family: "Capriola";
     color: #d42929
 }
+.titulonav {
+    display: None;
+}
 
 .juego {
     margin-top: 3rem;
@@ -75,15 +81,19 @@ footer {
     justify-content: center;
     font-size: 0.8rem;
 }
+.desplegable {
+    display:None;
+}
 
 @media  (max-width:800px){
     .titulo {
         font-size: 2rem;
+        align-items: center;
     }
 
     .juego {
         width: 90vw;
-        height: 70vh;
+        height: 80vh;
 		margin-top: 1rem;
     }
 
@@ -96,5 +106,46 @@ footer {
 	.principal {
 	  margin-top: 4.5rem;
 	}
-
+    .navdiv {
+        display: None;
+    }
+    .opciones {
+        display: flex;
+        font-size: 3rem;
+        justify-content: space-between;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    .opciones span {
+        padding-left: 0.4rem;
+        padding-right: 0.4rem;
+        border-radius: 0.7rem;
+    }
+    .opciones span:hover {
+        background-color: #FFB562;
+    }
+    .titulonav {
+        display: flex;
+        font-family: "Capriola";
+        color: #ffffff;
+        font-size: 2rem;
+        align-items: center;
+    }
+    .titulo {display: None}
+    .desplegable {
+        position: fixed;
+        top: 3.2rem;
+        background-color: #F87474;
+        color: white;
+        font-size: 1.2rem;
+        border-radius: 0 0 10px 0;
+        padding-top:0.2rem;
+    }
+    .desplegable div {
+        padding: 0.5rem;
+        border-radius: 10px;
+    }
+    .desplegable div:hover {
+        background-color: #FFB562;
+    }
 }
