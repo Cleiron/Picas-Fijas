@@ -112,6 +112,9 @@ footer {
 #contacto #correo, #contacto #asunto {
     width: 20rem;
 }
+#contacto #mensaje {
+    width: 75vw;
+}
 
 #login, #contacto {
     display: flex;
