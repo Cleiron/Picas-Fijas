@@ -34,25 +34,43 @@
     </div>
 
 <main class="principal">
-    <div class="titulogen">Registrarse</div>
-    <!--
-<form action="destino.html" method="get" target="_blank" id="contacto">
+ 
+
+<form action="destino.html" method="get" target="_blank" id="registro">
+    <fieldset>
+    <legend class="titulogen">Registro</legend>
     <div>
-    
+    <label for="usuario">Nombre de usuario</label><br>
+    <input type="text" name="usuario" id="usuario" placeholder="Usuario" required>
+    </div>
+    <div>
+    <label for="usuario">Correo electrónico</label><br>
     <input type="text" name="correo" id="correo" placeholder="Correo electrónico" required>
     </div>
     <div>
-        
-        <input type="text" name="asunto" id="asunto" placeholder="Asunto" required>
-        </div>
     <div>
-        <textarea id="mensaje" placeholder="Mensaje" cols="50" rows="10" required></textarea>
-        </div>
+    <label for="usuario">Fecha de nacimiento</label><br>
+    <input type="date" name="fechanacimiento" id="fechanacimiento" required>
+    </div>
     <div>
-        <input type="submit" value="Enviar" id="enviar">
-        </div>
+    <label for="usuario">Género</label><br>
+    <select name="genero" id="genero" required>
+    <option value="">-</option>
+    <option value="H">Hombre</option>
+    <option value="M">Mujer</option>
+    <option value="NB">No binario</option>
+    </select>
+    </div>
+    <div>
+    <input type="checkbox" name="tyc" id="tyc" required>
+    <label for="usuario">Acepto los <a href="index.html">Términos de Uso y Política de Privacidad</a></label>    
+    </div>
+    <div>
+    <input type="submit" value="Enviar registro" id="enviar">
+    </div>
+    </fieldset>
     
-</form> !-->
+</form>
 </div>
 
 

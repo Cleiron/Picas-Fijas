@@ -89,18 +89,25 @@ footer {
     display:None;
 }
 
-#login #ingresar, #contacto #enviar {
+#login #ingresar, #contacto #enviar, #registro #enviar {
     background-color: #F87474;
     color: white;
     border-radius: 0.5rem;
     padding: 0.5rem 1rem 0.5rem 1rem;
     border-color: white;
+    margin-top: 0.5rem;
 }
-#login input {
+#login input, #registro input, #registro select {
     padding: 0.5rem 1rem 0.5rem 1rem;
     margin-bottom: 0.5rem;
     border-radius: 0.2rem;
     border-color: white;
+}
+#registro label {
+    color: white;
+}
+#registro a {
+    color: #F87474;
 }
 
 #contacto input, #contacto textarea {
