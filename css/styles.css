@@ -114,6 +114,7 @@ footer {
 }
 #contacto #mensaje {
     width: 85vw;
+    max-width: 700px;
 }
 
 #login, #contacto {
