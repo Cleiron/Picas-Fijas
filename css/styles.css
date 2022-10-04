@@ -20,6 +20,10 @@ nav {
     background: #F87474;
     color: white;
 }
+nav a, .desplegable a {
+    color: white;
+    text-decoration: None;
+}
 .opciones {
     display: None;
 }
@@ -85,6 +89,32 @@ footer {
     display:None;
 }
 
+#login #ingresar {
+    background-color: #F87474;
+    color: white;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-color: white;
+}
+#login input {
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.2rem;
+    border-color: white;
+}
+#login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.titulogen {
+    display: flex;
+        font-family: "Capriola";
+        color: #ffffff;
+        font-size: 1.5rem;
+        margin: 0.5rem;
+}
+
 @media  (max-width:800px){
     .titulo {
         font-size: 2rem;
@@ -124,6 +154,8 @@ footer {
     .opciones span:hover {
         background-color: #FFB562;
     }
+
+
     .titulonav {
         display: flex;
         font-family: "Capriola";
