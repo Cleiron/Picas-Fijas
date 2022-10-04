@@ -89,7 +89,7 @@ footer {
     display:None;
 }
 
-#login #ingresar {
+#login #ingresar, #contacto #enviar {
     background-color: #F87474;
     color: white;
     border-radius: 0.5rem;
@@ -102,11 +102,26 @@ footer {
     border-radius: 0.2rem;
     border-color: white;
 }
-#login {
+
+#contacto input, #contacto textarea {
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.2rem;
+    border-color: white;
+}
+#contacto #correo, #contacto #asunto {
+    width: 20rem;
+}
+
+#login, #contacto {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+#contacto {
+    align-items: flex-start;
+}
+
 .titulogen {
     display: flex;
         font-family: "Capriola";
