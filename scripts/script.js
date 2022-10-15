@@ -64,7 +64,7 @@ function puntuaciones() {
         document.getElementById("puntuaciones").innerHTML='<p>No hay puntuaciones</p>'
     } else {
         info = obtenerResultado()
-        codigotabla = "<table><th>Momento</th><th>Resultado</th><th>Número</th><th>Intentos</th>"
+        codigotabla = "<table><th>Momento</th><th>Resultado</th><th>Nro</th><th>Intentos</th>"
         for (let i=0; i<info.length; i++) {
             if (info[i][1]=="Acertado") {
                 codigotabla+='<tr><td>'+info[i][0]+'</td><td>'+info[i][1]+'</td><td>'+info[i][2]+'</td><td>'+info[i][3]+'</td></tr>'
