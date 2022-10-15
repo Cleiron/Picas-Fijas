@@ -318,5 +318,16 @@ footer {
     .juegobotones {
         margin-top: 0.2rem;
     }
+    .titulonav, .opciones {
+        font-size: 1.8rem;
+        margin-top: 0.2rem;
+        margin-bottom: 0.2rem;
+    }
+    .principal {
+        margin-top: 3rem;
+    }
+    .desplegable {
+        top: 2.8rem;
+    }
 
 }
