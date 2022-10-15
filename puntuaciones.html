@@ -12,7 +12,7 @@
     <script src="scripts/script.js"></script>
 
 </head>
-<body>
+<body onload="puntuaciones();">
 <nav>
 <div class="opciones">
     <span onclick="AbrirCerrarMenu()">≡</span>
@@ -21,38 +21,20 @@
 <div class="navdiv">
 <a href="index.html"><div>Jugar!</div></a>
 <a href="intro.html"><div>¿Cómo se juega?</div></a>
-<a href="puntuaciones.html"><div>Puntuaciones</div></a>
+<a href="contacto.html"><div>Contacto</div></a>
 </div>
 
 </nav>
 <div class="desplegable">
     <a href="index.html"><div>Jugar!</div></a>
     <a href="intro.html"><div>¿Cómo se juega?</div></a>
-    <a href="puntuaciones.html"><div>Puntuaciones</div></a>
+    <a href="contacto.html"><div>Contacto</div></a>
     </div>
 
 <main class="principal">
-<form action="destino.html" method="get" target="_blank" id="contacto">
-    <fieldset>
-    <legend class="titulo">Contáctenos</legend>
-    <div>
-    <!--<label for="usuario">Usuario: </label> !-->
-    <input type="text" name="correo" id="correo" placeholder="Correo electrónico" required>
-    </div>
-    <div>
-        <!--<label for="usuario">Usuario: </label> !-->
-        <input type="text" name="asunto" id="asunto" placeholder="Asunto" required>
-        </div>
-    <div>
-        <textarea id="mensaje" placeholder="Mensaje" cols="50" rows="10" required></textarea>
-        </div>
-    <div>
-        <input type="submit" value="Enviar" id="enviar">
-        </div>
-    </fieldset>
-</form>
+    <div class="titulo">Puntuaciones</div>
+    <div id="puntuaciones"></div>
 </div>
-
 
 </main>
 <footer><p>Alba, Maximiliano - Proyecto de Codo a Codo</p></footer>

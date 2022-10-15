@@ -4,12 +4,33 @@ html {
 /*https://colorhunt.co/palette/f9f2ed3ab0ffffb562f87474*/
 body {
     background: rgb(176,241,246);
-    background: -moz-radial-gradient(circle, rgba(176,241,246,1) 0%, rgba(58,176,255,1) 100%);
+    background: -moz-radial-gradient(circle, rgba(176,241,246,1) 0%, rgb(58, 176, 255) 100%);
     background: -webkit-radial-gradient(circle, rgba(176,241,246,1) 0%, rgba(58,176,255,1) 100%);
-    background: radial-gradient(circle, rgba(176,241,246,1) 0%, rgba(58,176,255,1) 100%);
+    background: radial-gradient(circle, rgba(176,241,246,1) 0%, rgb(58, 176, 255) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#b0f1f6",endColorstr="#3ab0ff",GradientType=1);
-    
+    color: white;
     font-family: "Ubuntu";
+}
+
+dialog {
+    background-color: #F55353;
+    color: white;
+    border-radius: 4rem;
+    display: None;
+    flex-direction: column;
+    align-items: center;
+}
+dialog #resultado {
+    font-size: 4rem;
+    font-family: "Capriola";
+}
+dialog button {
+    font-size: 1.5rem;
+    background-color: #3ab0ff;
+    margin: 1rem;
+    border-radius: 1rem;
+    color: white;
+    border-color: white;
 }
 
 nav {
@@ -17,7 +38,7 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
-    background: #F87474;
+    background: #F55353;
     color: white;
 }
 nav a, .desplegable a {
@@ -42,7 +63,7 @@ nav a, .desplegable a {
     border-radius: 0.7rem;
 }
 .navdiv div:hover {
-    background-color: #FFB562;
+    background-color: #FEB139;
 }
 .principal {
     margin-top: 4rem;
@@ -62,19 +83,82 @@ nav a, .desplegable a {
     display: None;
 }
 
-.juego {
-    margin-top: 3rem;
-    background-color: #F9F2ED;
-    width: 35rem;
-    height: 40rem;
+#puntuaciones td, #puntuaciones th {
+    border: white 1px solid;
+    border-radius: 0.4rem;
+    background-color: #F55353;
+    font-size: 1.2rem;
+    padding: 0.2rem;
+    text-align: center;
+}
+#puntuaciones th {
+    background-color: #FEB139;
+    color: white;
+}
+
+.juego, .juegobotones {
+    margin-top: 1rem;
+    padding: 0.3rem;
+    background-color: rgb(249, 242, 237, 0.5);
     border-radius: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+.juegobotones, .juegobotones div  {
+    display: flex;
+    flex-direction: row;
+}
+
+#tabla {
+    display: flex;
+    flex-direction: column;
+}
+.fila {
+    display: flex;
+    flex-direction: row;
+}
+.celda {
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: 0.3rem;
+    border: black 1px solid;
+    border-radius: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: #143F6B;
+    background-color: rgb(247, 236, 217);
+    box-shadow: 3px 3px #FEB139;
+}
+.celda_f{
+    margin-left: 4rem;
+    background-color: #A3FF75;
+    box-shadow: 3px 3px #143F6B;
+    color: red;
+}
+.celda_p{
+    background-color: #FFCD75;
+    box-shadow: 3px 3px #143F6B;
+    color: red;
+}
+.celdai {
+    width: 3rem;
+    height: 3rem;
+    margin: 0.3rem;
+    border: black 1px solid;
+    border-radius: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: white;
+    background-color: #F55353;
+}
 
 footer {
-    background: #F87474;
+    background: #F55353;
     color: white;
     position: absolute;
     bottom:0;
@@ -85,29 +169,18 @@ footer {
     justify-content: center;
     font-size: 0.8rem;
 }
+
 .desplegable {
     display:None;
 }
 
-#login #ingresar, #contacto #enviar, #registro #enviar {
-    background-color: #F87474;
+#contacto #enviar {
+    background-color: #F55353;
     color: white;
     border-radius: 0.5rem;
     padding: 0.5rem 1rem 0.5rem 1rem;
     border-color: white;
     margin-top: 0.5rem;
-}
-#login input, #registro input, #registro select {
-    padding: 0.5rem 1rem 0.5rem 1rem;
-    margin-bottom: 0.5rem;
-    border-radius: 0.2rem;
-    border-color: white;
-}
-#registro label {
-    color: white;
-}
-#registro a {
-    color: #F87474;
 }
 
 #contacto input, #contacto textarea {
@@ -124,21 +197,10 @@ footer {
     max-width: 700px;
 }
 
-#login, #contacto {
+#contacto {
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
-#contacto {
     align-items: flex-start;
-}
-
-.titulogen {
-    display: flex;
-        font-family: "Capriola";
-        color: #ffffff;
-        font-size: 1.5rem;
-        margin: 0.5rem;
 }
 
 @media  (max-width:800px){
@@ -148,9 +210,16 @@ footer {
     }
 
     .juego {
-        width: 90vw;
-        height: calc(90vh - 8rem);
 		margin-top: 0.5rem;
+    }
+
+    .juegobotones {
+        display: flex;
+        flex-direction: column;
+    }
+    .juegobotones div {
+        display: flex;
+        flex-direction: row;
     }
 
     .navdiv {
@@ -178,7 +247,7 @@ footer {
         border-radius: 0.7rem;
     }
     .opciones span:hover {
-        background-color: #FFB562;
+        background-color: #FEB139;
     }
 
 
@@ -193,7 +262,7 @@ footer {
     .desplegable {
         position: fixed;
         top: 3.2rem;
-        background-color: #F87474;
+        background-color: #F55353;
         color: white;
         font-size: 1.2rem;
         border-radius: 0 0 10px 0;
@@ -204,6 +273,6 @@ footer {
         border-radius: 10px;
     }
     .desplegable div:hover {
-        background-color: #FFB562;
+        background-color: #FEB139;
     }
 }

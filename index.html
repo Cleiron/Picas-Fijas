@@ -1,7 +1,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Trivia Game</title>
+    <title>Picas & Fijas</title>
     <link rel="icon" type="image/x-icon" href="icono/favicon.ico">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700,900" rel="stylesheet">
@@ -12,34 +12,52 @@
     <script src="scripts/script.js"></script>
 
 </head>
-<body>
+<body onload="{generarceldas();juego();}">
 <nav>
 <div class="opciones">
     <span onclick="AbrirCerrarMenu()">≡</span>
-    <div class="titulonav">Trivia Game!</div>
+    <div class="titulonav">Picas & Fijas</div>
 </div>
 <div class="navdiv">
 <a href="intro.html"><div>¿Cómo se juega?</div></a>
-<a href="contacto.html"><div>Contáctenos</div></a>
-<a href="login.html"><div>Ingresar</div></a>
-<a href="registro.html"><div>Registrarse</div></a>
+<a href="puntuaciones.html"><div>Puntuaciones</div></a>
+<a href="contacto.html"><div>Contacto</div></a>
 </div>
 
 </nav>
 <div class="desplegable">
     <a href="intro.html"><div>¿Cómo se juega?</div></a>
-    <a href="contacto.html"><div>Contáctenos</div></a>
-    <a href="login.html"><div>Ingresar</div></a>
-    <a href="registro.html"><div>Registrarse</div></a>
+    <a href="puntuaciones.html"><div>Puntuaciones</div></a>
+    <a href="contacto.html"><div>Contacto</div></a>
     </div>
 
 <main class="principal">
-<div class="titulo">Trivia Game!</div>
+<div class="titulo">Picas & Fijas</div>
 <div class="juego">
-    <p>Aquí el juego</p>
+<div id="tabla"></div>
 </div>
-
-
+<div class="juegobotones">
+<div>
+<button class="celdai" id="n0" onclick="ingresa('0');">0</button>
+<button class="celdai" id="n1" onclick="ingresa('1');">1</button>
+<button class="celdai" id="n2" onclick="ingresa('2');">2</button>
+<button class="celdai" id="n3" onclick="ingresa('3');">3</button>
+<button class="celdai" id="n4" onclick="ingresa('4');">4</button>
+<button class="celdai" id="n5" onclick="ingresa('5');">5</button>
+</div><div>
+<button class="celdai" id="n6" onclick="ingresa('6');">6</button>
+<button class="celdai" id="n7" onclick="ingresa('7');">7</button>
+<button class="celdai" id="n8" onclick="ingresa('8');">8</button>
+<button class="celdai" id="n9" onclick="ingresa('9');">9</button>
+<button class="celdai" id="nb" onclick="ingresa('b');"><b>🗑</b></button>
+<button class="celdai" id="nok" onclick="ingresa('ok');">✔</button>
+</div>
+</div>
+<dialog id="fin">
+    <p id="resultado"></p>
+    <p id="mensaje"></p>
+    <button onclick="location.reload()">Volver a jugar?</button>
+</dialog>
 </main>
-<footer><p>Equipo CGM - Proyecto de Codo a Codo</p></footer>
+<footer><p>Alba, Maximiliano - Proyecto de Codo a Codo</p></footer>
 </body>
