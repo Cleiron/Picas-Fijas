@@ -1,7 +1,7 @@
 html {
     position: relative;
 }
-/*https://colorhunt.co/palette/f9f2ed3ab0ffffb562f87474*/
+
 body {
     background: rgb(176,241,246);
     background: -moz-radial-gradient(circle, rgba(176,241,246,1) 0%, rgb(58, 176, 255) 100%);
@@ -274,5 +274,23 @@ footer {
     }
     .desplegable div:hover {
         background-color: #FEB139;
+    }
+
+
+    .celda {
+        width: 2.5rem;
+        height: 2.5rem;
+        margin: 0.3rem;
+        font-size: 2.2rem;
+    }
+    .celda_f{
+        margin-left: 2rem;
+    }
+
+    .celdai {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 2.2rem;
+        margin: 0.2rem;
     }
 }
