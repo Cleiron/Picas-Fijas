@@ -83,6 +83,9 @@ nav a, .desplegable a {
     display: None;
 }
 
+#puntuaciones table {
+    overflow: auto;
+}
 #puntuaciones td, #puntuaciones th {
     border: white 1px solid;
     border-radius: 0.4rem;
