@@ -294,7 +294,7 @@ footer {
     }
 }
 
-@media  (max-width: 800px) and (max-height: 800px){
+@media  (max-width: 800px) and (max-height: 740px){
     .juego {
         margin-top: 0;
     }
