@@ -96,7 +96,7 @@ function comprobar(intento) {
         document.getElementById('mensaje').innerText="Numero acertado: "+num[0]+num[1]+num[2]+num[3]+". Intentos: "+(fila+1)
         document.getElementById('fin').showModal()
         document.getElementById('fin').style.display="flex"
-        guardarResultado([tiempo,'Acertado',(num[0]*1000+num[1]*100+num[2]*10+num[3]),fila+1])
+        guardarResultado([tiempo,'Acertado',''+num[0]+num[1]+num[2]+num[3],fila+1])
     }
     if ((fila==8)&&(fijas!=4)) {
         tiempo = obtenerTiempo()
@@ -104,7 +104,7 @@ function comprobar(intento) {
         document.getElementById('mensaje').innerText="Numero objetivo: "+num[0]+num[1]+num[2]+num[3]+"."
         document.getElementById('fin').showModal()
         document.getElementById('fin').style.display="flex"
-        guardarResultado([tiempo,'Fallido',(num[0]*1000+num[1]*100+num[2]*10+num[3])])
+        guardarResultado([tiempo,'Fallido',''+num[0]+num[1]+num[2]+num[3]])
     }
 }
 
