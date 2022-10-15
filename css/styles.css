@@ -298,7 +298,7 @@ footer {
     }
 
     #genially {
-        width: 75vw;
+        width: 95vw;
     }
 }
 
@@ -339,6 +339,10 @@ footer {
     }
     footer {
         font-size: 0.6rem;
+    }
+
+    .titulo2 {
+        margin-top: 0.8rem;
     }
 
 }
