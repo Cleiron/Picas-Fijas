@@ -85,7 +85,7 @@ nav a, .desplegable a {
 
 #puntuaciones {
     overflow: auto;
-    height: 80vh;
+    max-height: 80vh;
 }
 #puntuaciones td, #puntuaciones th {
     border: white 1px solid;
