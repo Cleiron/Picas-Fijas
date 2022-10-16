@@ -222,7 +222,7 @@ footer {
     border-radius: 0.2rem;
     border-color: white;
 }
-#contacto #correo, #contacto #asunto {
+#contacto #correo, #contacto #asunto, #contacto #nombre {
     width: 20rem;
 }
 #contacto #mensaje {

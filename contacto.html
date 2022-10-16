@@ -32,19 +32,20 @@
     </div>
 
 <main class="principal">
-<form action="destino.html" method="get" target="_blank" id="contacto">
+<form action="https://formspree.io/f/xaykbgkg" method="POST" target="_blank" id="contacto">
     <fieldset>
-    <legend class="titulo2">Contáctenos</legend>
+    <legend class="titulo2">Contáctame</legend>
     <div>
-    <!--<label for="usuario">Usuario: </label> !-->
-    <input type="text" name="correo" id="correo" placeholder="Correo electrónico" required>
+    <input type="text" name="nombre" id="nombre" placeholder="Nombre (*)" required>
     </div>
     <div>
-        <!--<label for="usuario">Usuario: </label> !-->
-        <input type="text" name="asunto" id="asunto" placeholder="Asunto" required>
-        </div>
+    <input type="text" name="asunto" id="asunto" placeholder="Asunto">
+    </div>
     <div>
-        <textarea id="mensaje" placeholder="Mensaje" cols="50" rows="10" required></textarea>
+    <input type="text" name="correo" id="correo" placeholder="Correo electrónico (*)" required>
+    </div>
+    <div>
+        <textarea id="mensaje" placeholder="Mensaje (*)" cols="50" rows="10" required></textarea>
         </div>
     <div>
         <input type="submit" value="Enviar" id="enviar">
@@ -52,8 +53,49 @@
     </fieldset>
 </form>
 </div>
-
-
 </main>
 <footer><p>Alba, Maximiliano - Proyecto de Codo a Codo</p></footer>
+
+<dialog id="fin">
+    <p id="resultado">Enviado!</p>
+    <p id="mensaje">Lo estaré viendo pronto.</p>
+    <button onclick="window.location.href='index.html'">Cerrar</button>
+</dialog>
+
+<!-- script -->
+<script>
+    const $form = document.querySelector('#contacto')
+    //$form.addEventListener('submit', handleSubmit)
+    $form.addEventListener('submit', handleSubmit)
+
+    function validarEmail() {
+        // de https://es.stackoverflow.com/questions/142/validar-un-email-en-javascript-que-acepte-todos-los-caracteres-latinos
+        email = document.getElementById("correo").value
+        emailRegex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+        return emailRegex.test(email)
+    }
+
+    async function handleSubmit(event) {
+        event.preventDefault()
+        if (!validarEmail()) {
+            alert('Revise el correo de contacto proporcionado. Dirección no válida.')
+            return false
+        }
+        const form = new FormData(this)
+        const response = await fetch(this.action, {
+            method: this.method,
+            body: form,
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        if (response.ok) {
+            this.reset()
+            document.getElementById('fin').showModal()
+            document.getElementById('fin').style.display="flex"
+        }
+    } 
+
+</script>
+
 </body>
