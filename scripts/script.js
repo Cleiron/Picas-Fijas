@@ -90,7 +90,7 @@ function comprobar(intento) {
     }
     document.getElementById('p'+fila).innerText=picas
     document.getElementById('f'+fila).innerText=fijas
-    if (fila<8) document.getElementById('fila'+(fila+1)).style.animation="0.6s giroenx linear 1"
+    if ((fila<8)&&(fijas!=4)) document.getElementById('fila'+(fila+1)).style.animation="0.6s giroenx linear 1"
     if (fijas==4) {
         tiempo = obtenerTiempo()
         document.getElementById('resultado').innerText="Ganaste!"
