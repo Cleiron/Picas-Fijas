@@ -66,7 +66,7 @@ function puntuaciones() {
         info = obtenerResultado()
         codigotabla = "<table><th>Momento</th><th>Resultado</th><th>Nro</th><th>Intentos</th>"
         for (let i=0; i<info.length; i++) {
-            if (info[i][1]=="Acertado") {
+            if (info[i][1]=="Ganado") {
                 codigotabla+='<tr><td>'+info[i][0]+'</td><td>'+info[i][1]+'</td><td>'+info[i][2]+'</td><td>'+info[i][3]+'</td></tr>'
             } else {
                 codigotabla+='<tr><td>'+info[i][0]+'</td><td>'+info[i][1]+'</td><td>'+info[i][2]+'</td><td>-</td></tr>'
@@ -93,11 +93,11 @@ function comprobar(intento) {
     if (fila<8) document.getElementById('fila'+(fila+1)).style.animation="0.6s giroenx linear 1"
     if (fijas==4) {
         tiempo = obtenerTiempo()
-        document.getElementById('resultado').innerText="Acertaste!"
-        document.getElementById('mensaje').innerText="Numero acertado: "+num[0]+num[1]+num[2]+num[3]+". Intentos: "+(fila+1)
+        document.getElementById('resultado').innerText="Ganaste!"
+        document.getElementById('mensaje').innerText="Numero: "+num[0]+num[1]+num[2]+num[3]+". Intentos: "+(fila+1)
         document.getElementById('fin').showModal()
         document.getElementById('fin').style.display="flex"
-        guardarResultado([tiempo,'Acertado',''+num[0]+num[1]+num[2]+num[3],fila+1])
+        guardarResultado([tiempo,'Ganado',''+num[0]+num[1]+num[2]+num[3],fila+1])
     }
     if ((fila==8)&&(fijas!=4)) {
         tiempo = obtenerTiempo()
@@ -105,7 +105,7 @@ function comprobar(intento) {
         document.getElementById('mensaje').innerText="Numero objetivo: "+num[0]+num[1]+num[2]+num[3]+"."
         document.getElementById('fin').showModal()
         document.getElementById('fin').style.display="flex"
-        guardarResultado([tiempo,'Fallido',''+num[0]+num[1]+num[2]+num[3]])
+        guardarResultado([tiempo,'Perdido',''+num[0]+num[1]+num[2]+num[3]])
     }
 }
 
