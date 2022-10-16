@@ -299,7 +299,7 @@ footer {
     .titulo2 {font-size: 2rem;}
     .desplegable {
         position: fixed;
-        top: 3.2rem;
+        top: 3rem;
         background-color: #F55353;
         color: white;
         font-size: 1.2rem;

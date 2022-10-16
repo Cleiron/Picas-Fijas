@@ -10,12 +10,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="scripts/script.js"></script>
+    <script src="https://kit.fontawesome.com/e022f96c49.js" crossorigin="anonymous"></script>
 
 </head>
 <body onload="{generarceldas();juego();}">
 <nav>
 <div class="opciones">
-    <span onclick="AbrirCerrarMenu()">✸</span>
+    <span onclick="AbrirCerrarMenu()"><i class="fa-solid fa-bars"></i></span>
     <div class="titulonav"><a href="index.html">Picas & Fijas</a></div>
 </div>
 <div class="navdiv">
@@ -49,8 +50,8 @@
 <button class="celdai" id="n7" onclick="ingresa('7');">7</button>
 <button class="celdai" id="n8" onclick="ingresa('8');">8</button>
 <button class="celdai" id="n9" onclick="ingresa('9');">9</button>
-<button class="celdai" id="nb" onclick="ingresa('b');"><b>🗑</b></button>
-<button class="celdai" id="nok" onclick="ingresa('ok');">✔</button>
+<button class="celdai" id="nb" onclick="ingresa('b');"><i class="fa-sharp fa-solid fa-trash"></i></button>
+<button class="celdai" id="nok" onclick="ingresa('ok');"><i class="fa-solid fa-check"></i></button>
 </div>
 </div>
 <dialog id="fin">
