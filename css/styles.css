@@ -20,6 +20,31 @@ dialog {
     flex-direction: column;
     align-items: center;
 }
+
+
+/*
+@keyframes sacudirhorizontalmente {
+    0% {transform: translate(0,0);}
+    12.5% {transform: translate(0.3rem,0rem);}
+    25% {transform: translate(0,0);}
+    37.5% {transform: translate(-0.3rem,0);}
+    50% {transform: translate(0,0);}
+    62.5% {transform: translate(0.3rem,0rem);}
+    75% {transform: translate(0,0);}
+    87.5% {transform: translate(-0.3rem,0);}
+    100% {transform: translate(0,0);}
+}*/
+
+@keyframes giroenx {
+    0% {transform: rotateX(0)}
+    50% {transform: rotateX(180deg)}
+    100% {transform: rotateX(360deg)}
+}
+
+/*activacion de giroenx por js*/
+
+
+
 dialog #resultado {
     font-size: 4rem;
     font-family: "Capriola";

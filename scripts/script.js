@@ -5,7 +5,7 @@ function AbrirCerrarMenu() {
 function generarceldas() {
     tabla = ""
     for (i=0; i<9; i++) {
-        tabla += '<div class="fila">'
+        tabla += '<div class="fila" id="fila'+i+'">'
         for (j=0; j<4; j++) {
             tabla+='<div id="'+i+'_'+j+'" class="celda"></div>'
         }
@@ -90,6 +90,7 @@ function comprobar(intento) {
     }
     document.getElementById('p'+fila).innerText=picas
     document.getElementById('f'+fila).innerText=fijas
+    document.getElementById('fila'+(fila+1)).style.animation="0.6s giroenx linear 1"
     if (fijas==4) {
         tiempo = obtenerTiempo()
         document.getElementById('resultado').innerText="Acertaste!"
@@ -164,3 +165,22 @@ function ingresa(str) {
     if (pos<4) pos++
 
 }
+
+//animaciones
+const animateCSS = (element, animation, prefix = 'animate__') =>
+  // We create a Promise and return it
+  new Promise((resolve, reject) => {
+    const animationName = `${prefix}${animation}`;
+    const node = document.querySelector(element);
+
+    node.classList.add(`${prefix}animated`, animationName);
+
+    // When the animation ends, we clean the classes and resolve the Promise
+    function handleAnimationEnd(event) {
+      event.stopPropagation();
+      node.classList.remove(`${prefix}animated`, animationName);
+      resolve('Animation ended');
+    }
+
+    node.addEventListener('animationend', handleAnimationEnd, {once: true});
+  });
