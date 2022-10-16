@@ -241,6 +241,10 @@ footer {
     width: 75vh;
 }
 
+#nb {
+    font-size: 1.5rem;
+}
+
 @media  (max-width: 800px) {
     .titulo {
         font-size: 2rem;
