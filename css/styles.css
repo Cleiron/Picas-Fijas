@@ -48,6 +48,7 @@ dialog {
 dialog #resultado {
     font-size: 4rem;
     font-family: "Capriola";
+    margin: 1rem;
 }
 dialog button {
     font-size: 1.5rem;
